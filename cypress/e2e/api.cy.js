@@ -152,7 +152,7 @@ describe('API Test', () => {
             expect(parsedBody.message).to.eq('User exists!');
         });
     });
-
+ 
 
     it('API 8: POST To Verify Login without email parameter', () => {
         cy.api({
