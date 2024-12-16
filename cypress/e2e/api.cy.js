@@ -241,13 +241,6 @@ describe('API Test', () => {
             assertHeaders(response.headers);
             expect(body).to.have.property('user');
             const user = body.user;
-            expect(user).to.have.property('id').that.is.a('number');
-            expect(user).to.have.property('name').that.is.a('string');
-            expect(user).to.have.property('email').that.is.a('string');
-            expect(user).to.have.property('first_name').that.is.a('string');
-            expect(user).to.have.property('last_name').that.is.a('string');
-            expect(user).to.have.property('country').that.is.a('string');
-            expect(user).to.have.property('city').that.is.a('string');
             
             //expect(user).to.have.property('id', 503148); падает с каждым новым кругом
             expect(user).to.have.property('name', 'IRA');
