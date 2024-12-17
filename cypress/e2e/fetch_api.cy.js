@@ -1,7 +1,6 @@
-const baseUrl = 'https://rickandmortyapi.com/api/character';
+const baseUrl = 'https://futuramaapi.com/api/characters?orderBy=id&orderByDirection=asc&page=1&size=50'
 const limit = 10;
 
-// Функция для извлечения всех ссылок из объекта JSON
 function extractLinks(data) {
     let links = []; 
     if (Array.isArray(data)) {
@@ -21,8 +20,7 @@ function extractLinks(data) {
     }
     return links;
 }
-
-// Функция для получения всех ссылок с проверкой их статуса
+// Функция лимита  ссылок с проверкой их статуса
 function fetchAllLinks(url, limit) {
     return fetch(url)
         .then(response => {
