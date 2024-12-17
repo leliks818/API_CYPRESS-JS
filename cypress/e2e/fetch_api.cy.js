@@ -41,7 +41,6 @@ function fetchAllLinks(url, limit) {
         });
 }
 
-//  для получения всех ссылок и проверки их статуса
 fetchAllLinks(baseUrl, limit)
     .then(allLinks => {
         if (allLinks.length === 0) {
